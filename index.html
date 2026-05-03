@@ -286,6 +286,21 @@ footer{background:var(--dark2);text-align:center;padding:22px;font-size:12px;col
   .tool-banner{height:52px;margin-right:44px}
   .media-grid{grid-template-columns:1fr;gap:18px}
 }
+  .ct-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:46px}
+.ct{width:100%;border-collapse:collapse;font-size:12px}
+.ct thead th{padding:10px 14px;text-align:left;font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid rgba(77,109,121,0.3);background:rgba(255,255,255,0.04);white-space:nowrap}
+.ct td{padding:9px 14px;border-bottom:1px solid rgba(255,255,255,0.05);vertical-align:middle}
+.ct-campaign-cell{font-family:"Syne",sans-serif;font-weight:700;font-size:11px;color:var(--light);background:rgba(77,109,121,0.1);text-align:center;writing-mode:vertical-lr;transform:rotate(180deg);white-space:nowrap;border-right:2px solid rgba(77,109,121,0.3);min-width:30px}
+.ct-adset-cell{font-size:11px;font-weight:600;text-align:center;writing-mode:vertical-lr;transform:rotate(180deg);white-space:nowrap;border-right:1px solid rgba(77,109,121,0.2);padding:12px 10px;min-width:30px}
+.ct-adset-pros-int{background:rgba(77,109,121,0.18);color:#a8c8d2}
+.ct-adset-pros-lal{background:rgba(77,109,121,0.12);color:#b0cdd4}
+.ct-adset-rmk{background:rgba(43,69,83,0.4);color:#6ee7b7}
+.ct-ad{color:rgba(255,255,255,0.78);font-size:12px}
+.ct-badge{display:inline-block;font-size:9px;font-weight:600;letter-spacing:.08em;padding:2px 7px;border-radius:3px;margin-right:6px;text-transform:uppercase;vertical-align:middle}
+.ct-badge.estatica{background:rgba(77,109,121,0.25);color:#a8c8d2}
+.ct-badge.dinamica{background:rgba(110,231,183,0.12);color:#6ee7b7}
+@media(max-width:640px){.ct-campaign-cell,.ct-adset-cell{writing-mode:horizontal-tb;transform:none;font-size:10px}}
+  
 </style>
 </head>
 <body>
@@ -556,20 +571,20 @@ footer{background:var(--dark2);text-align:center;padding:22px;font-size:12px;col
         <tr><td class="ct-ad"><span class="ct-badge estatica">Estática</span>V2 · Intereses</td></tr>
         <tr><td class="ct-ad"><span class="ct-badge estatica">Estática</span>V3 · Intereses</td></tr>
         <tr><td class="ct-ad"><span class="ct-badge dinamica">Dinámica</span>V1 · LAL</td></tr>
-        <tr><td class="ct-ad"><span class="ct-badge dinamica">Dinámica</span>Video Marina · Intereses</td></tr>
-        <tr><td class="ct-ad"><span class="ct-badge dinamica">Dinámica</span>Video 2 Marina · Intereses</td></tr>
+        <tr><td class="ct-ad"><span class="ct-badge dinamica">Dinámica</span>Video · Intereses</td></tr>
+        <tr><td class="ct-ad"><span class="ct-badge dinamica">Dinámica</span>Video 2 · Intereses</td></tr>
         <tr><td class="ct-adset-cell ct-adset-pros-lal" rowspan="7">[PROS] LAL</td><td class="ct-ad"><span class="ct-badge dinamica">Dinámica</span>V3 · LAL</td></tr>
         <tr><td class="ct-ad"><span class="ct-badge estatica">Estática</span>V2 · LAL</td></tr>
         <tr><td class="ct-ad"><span class="ct-badge estatica">Estática</span>V3 · LAL</td></tr>
         <tr><td class="ct-ad"><span class="ct-badge estatica">Estática</span>V1 · LAL</td></tr>
-        <tr><td class="ct-ad"><span class="ct-badge dinamica">Dinámica</span>Video Marina · LAL</td></tr>
+        <tr><td class="ct-ad"><span class="ct-badge dinamica">Dinámica</span>Video · LAL</td></tr>
         <tr><td class="ct-ad"><span class="ct-badge dinamica">Dinámica</span>V1 · LAL</td></tr>
-        <tr><td class="ct-ad"><span class="ct-badge dinamica">Dinámica</span>Video 2 Marina · LAL</td></tr>
+        <tr><td class="ct-ad"><span class="ct-badge dinamica">Dinámica</span>Video 2 · LAL</td></tr>
         <tr><td class="ct-adset-cell ct-adset-rmk" rowspan="5">[RMK]</td><td class="ct-ad"><span class="ct-badge estatica">Estática</span>V3 · RMK</td></tr>
         <tr><td class="ct-ad"><span class="ct-badge estatica">Estática</span>V2 · RMK</td></tr>
         <tr><td class="ct-ad"><span class="ct-badge estatica">Estática</span>V1 · RMK</td></tr>
-        <tr><td class="ct-ad"><span class="ct-badge dinamica">Dinámica</span>Video Marina · RMK</td></tr>
-        <tr><td class="ct-ad"><span class="ct-badge dinamica">Dinámica</span>Video 2 Marina · RMK</td></tr>
+        <tr><td class="ct-ad"><span class="ct-badge dinamica">Dinámica</span>Video · RMK</td></tr>
+        <tr><td class="ct-ad"><span class="ct-badge dinamica">Dinámica</span>Video · RMK</td></tr>
       </tbody>
     </table>
   </div>
