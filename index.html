@@ -305,27 +305,34 @@ footer{background:var(--dark2);text-align:center;padding:22px;font-size:12px;col
   .tool-banner{height:52px;margin-right:34px}
   .media-grid{grid-template-columns:1fr;gap:18px}
 }
-  .ct-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:46px;max-width:680px}
-.ct{width:100%;border-collapse:collapse;font-size:12px;table-layout:fixed}
-.ct thead th{padding:10px 14px;text-align:left;font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid rgba(77,109,121,0.3);background:rgba(255,255,255,0.04);white-space:nowrap}
-.ct thead th:first-child{width:26%}.ct thead th:nth-child(2){width:30%}.ct thead th:nth-child(3){width:44%}
-.ct td{padding:9px 14px;border-bottom:1px solid rgba(255,255,255,0.05);vertical-align:middle}
-.ct-campaign-cell{font-family:"Syne",sans-serif;font-weight:700;font-size:11px;color:var(--light);background:rgba(77,109,121,0.1);text-align:center;white-space:nowrap;border-right:2px solid rgba(77,109,121,0.3);padding:10px 14px}
-.ct-adset-cell{font-size:11px;font-weight:600;text-align:center;white-space:nowrap;border-right:1px solid rgba(77,109,121,0.2);padding:10px 14px}
+  .ct-tree{max-width:640px;margin-bottom:46px}
+.ct-tree-lbl{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px}
+.ct-campaign-bar{background:rgba(77,109,121,0.13);border:1px solid rgba(77,109,121,0.35);border-radius:8px 8px 0 0;padding:10px 16px;font-family:"Syne",sans-serif;font-weight:700;font-size:12px;color:var(--light);display:flex;align-items:center;gap:10px}
+.ct-c-tag{background:rgba(77,109,121,0.35);padding:2px 8px;border-radius:4px;font-size:10px;letter-spacing:.06em;flex-shrink:0}
+.ct-adsets{border:1px solid rgba(77,109,121,0.2);border-top:none;border-radius:0 0 8px 8px;overflow:hidden}
+.ct-adset-block+.ct-adset-block{border-top:1px solid rgba(77,109,121,0.18)}
+.ct-adset-hdr{font-size:11px;font-weight:600;padding:9px 16px;display:flex;justify-content:space-between;align-items:center}
 .ct-adset-pros-int{background:rgba(77,109,121,0.18);color:#a8c8d2}
 .ct-adset-pros-lal{background:rgba(77,109,121,0.12);color:#b0cdd4}
 .ct-adset-rmk{background:rgba(43,69,83,0.4);color:#6ee7b7}
-.ct-ad{color:rgba(255,255,255,0.78);font-size:12px}
-.ct-badge{display:inline-block;font-size:9px;font-weight:600;letter-spacing:.08em;padding:2px 7px;border-radius:3px;margin-right:6px;text-transform:uppercase;vertical-align:middle}
+.ct-adset-count{font-size:10px;font-weight:400;opacity:.65}
+.ct-ads-grid{display:grid;grid-template-columns:1fr 1fr;padding:6px 10px 10px}
+.ct-ad-item{padding:5px 8px;font-size:12px;color:rgba(255,255,255,0.78);display:flex;align-items:center;gap:0;border-radius:4px}
+.ct-badge{display:inline-block;font-size:9px;font-weight:600;letter-spacing:.08em;padding:2px 7px;border-radius:3px;margin-right:6px;text-transform:uppercase;vertical-align:middle;flex-shrink:0}
 .ct-badge.estatica{background:rgba(77,109,121,0.25);color:#a8c8d2}
 .ct-badge.dinamica{background:rgba(110,231,183,0.12);color:#6ee7b7}
+.ext-val{margin-top:36px;padding:20px 24px;background:rgba(255,255,255,0.04);border:1px solid rgba(77,109,121,0.22);border-radius:12px}
+.ext-val-lbl{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px}
+.ext-val-links{display:flex;flex-direction:column;gap:10px}
+.ext-val-link{display:flex;align-items:center;gap:14px;padding:12px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(77,109,121,0.18);border-radius:8px;text-decoration:none;color:inherit;transition:border-color .2s,background .2s}
+.ext-val-link:hover{border-color:rgba(106,141,154,0.5);background:rgba(77,109,121,0.1)}
+.ext-val-source{font-size:13px;font-weight:600;color:var(--light);margin-bottom:2px}
+.ext-val-desc{font-size:12px;color:rgba(255,255,255,0.55)}
 @media(max-width:640px){
-  .ct-wrap{max-width:100%;margin:0 0 46px}
-  .ct thead th:first-child,.ct-campaign-cell{display:none}
-  .ct thead th{padding:7px 10px;font-size:9px}
-  .ct-adset-cell{white-space:normal;font-size:10px;padding:8px 10px;min-width:90px}
-  .ct td{padding:7px 10px}
-  .ct{font-size:11px}
+  .ct-ads-grid{grid-template-columns:1fr}
+  .ct-adset-hdr{font-size:10px;padding:8px 12px}
+  .ct-ads-grid{padding:4px 8px 8px}
+  .ct-ad-item{font-size:11px}
 }
   
 </style>
@@ -553,6 +560,20 @@ footer{background:var(--dark2);text-align:center;padding:22px;font-size:12px;col
       <p style="font-size:12px;color:#6ee7b7;margin-top:14px;font-style:italic">Nuevas audiencias captadas mediante contenido estratégico.</p>
     </div>
   </div>
+
+  <div class="ext-val fu">
+    <p class="ext-val-lbl">Publicado como caso de éxito en</p>
+    <div class="ext-val-links">
+      <a href="https://keytrends.ai/es/soluciones/casos-de-estudio/enae" target="_blank" rel="noopener" class="ext-val-link">
+        <div style="width:32px;height:32px;background:rgba(77,109,121,0.25);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🔗</div>
+        <div><div class="ext-val-source">Keytrends.ai</div><div class="ext-val-desc">Caso de estudio — Estrategia de contenidos ENAE Business School</div></div>
+      </a>
+      <a href="https://www.sistrix.es/casos-exito/enae/" target="_blank" rel="noopener" class="ext-val-link">
+        <div style="width:32px;height:32px;background:rgba(77,109,121,0.25);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🔗</div>
+        <div><div class="ext-val-source">SISTRIX</div><div class="ext-val-desc">Caso de éxito — Crecimiento de visibilidad SEO ENAE Business School</div></div>
+      </a>
+    </div>
+  </div>
 </section>
 
 <section id="keywords">
@@ -591,32 +612,47 @@ footer{background:var(--dark2);text-align:center;padding:22px;font-size:12px;col
       <p style="font-size:13px;color:var(--light);margin:0;line-height:1.75;font-weight:300">En 2024, la frecuencia media de <strong style="color:white">4,93</strong> indicaba una saturación severa: los mismos usuarios veían los anuncios casi 5 veces, disparando costes y quemando la audiencia. En 2025 se reestructuró la segmentación y el funnel completo, bajando la frecuencia a <strong style="color:white">1,68</strong> y llegando a <strong style="color:#6ee7b7">+1,43 millones de personas nuevas</strong> pese a gestionar mayor volumen de campañas.</p>
     </div>
   </div>
-   <div class="ct-wrap fu">
-    <p style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px">Estructura real de campaña · Meta Ads</p>
-    <table class="ct">
-      <thead><tr><th>Campaña</th><th>Conjunto de anuncios</th><th>Anuncio</th></tr></thead>
-      <tbody>
-        <tr><td class="ct-campaign-cell" rowspan="19">[LEADS] · EJEMPLO CAMPAÑA · 26-27</td><td class="ct-adset-cell ct-adset-pros-int" rowspan="7">[PROS] INTERESES</td><td class="ct-ad"><span class="ct-badge estatica">Estática</span>V1 · Intereses</td></tr>
-        <tr><td class="ct-ad"><span class="ct-badge dinamica">Dinámica</span>V3 · Intereses</td></tr>
-        <tr><td class="ct-ad"><span class="ct-badge estatica">Estática</span>V2 · Intereses</td></tr>
-        <tr><td class="ct-ad"><span class="ct-badge estatica">Estática</span>V3 · Intereses</td></tr>
-        <tr><td class="ct-ad"><span class="ct-badge dinamica">Dinámica</span>V1 · Intereses</td></tr>
-        <tr><td class="ct-ad"><span class="ct-badge dinamica">Dinámica</span>Video · Intereses</td></tr>
-        <tr><td class="ct-ad"><span class="ct-badge dinamica">Dinámica</span>Video 2 · Intereses</td></tr>
-        <tr><td class="ct-adset-cell ct-adset-pros-lal" rowspan="7">[PROS] LAL</td><td class="ct-ad"><span class="ct-badge dinamica">Dinámica</span>V3 · LAL</td></tr>
-        <tr><td class="ct-ad"><span class="ct-badge estatica">Estática</span>V2 · LAL</td></tr>
-        <tr><td class="ct-ad"><span class="ct-badge estatica">Estática</span>V3 · LAL</td></tr>
-        <tr><td class="ct-ad"><span class="ct-badge estatica">Estática</span>V1 · LAL</td></tr>
-        <tr><td class="ct-ad"><span class="ct-badge dinamica">Dinámica</span>Video · LAL</td></tr>
-        <tr><td class="ct-ad"><span class="ct-badge dinamica">Dinámica</span>V1 · LAL</td></tr>
-        <tr><td class="ct-ad"><span class="ct-badge dinamica">Dinámica</span>Video 2 · LAL</td></tr>
-        <tr><td class="ct-adset-cell ct-adset-rmk" rowspan="5">[RMK]</td><td class="ct-ad"><span class="ct-badge estatica">Estática</span>V3 · RMK</td></tr>
-        <tr><td class="ct-ad"><span class="ct-badge estatica">Estática</span>V2 · RMK</td></tr>
-        <tr><td class="ct-ad"><span class="ct-badge estatica">Estática</span>V1 · RMK</td></tr>
-        <tr><td class="ct-ad"><span class="ct-badge dinamica">Dinámica</span>Video · RMK</td></tr>
-        <tr><td class="ct-ad"><span class="ct-badge dinamica">Dinámica</span>Video · RMK</td></tr>
-      </tbody>
-    </table>
+  <div class="ct-tree fu">
+    <p class="ct-tree-lbl">Estructura real de campaña · Meta Ads</p>
+    <div class="ct-campaign-bar">
+      <span class="ct-c-tag">[LEADS]</span>EJEMPLO CAMPAÑA · 26-27
+    </div>
+    <div class="ct-adsets">
+      <div class="ct-adset-block">
+        <div class="ct-adset-hdr ct-adset-pros-int">[PROS] INTERESES <span class="ct-adset-count">7 anuncios</span></div>
+        <div class="ct-ads-grid">
+          <div class="ct-ad-item"><span class="ct-badge estatica">Estática</span>V1 · Intereses</div>
+          <div class="ct-ad-item"><span class="ct-badge dinamica">Dinámica</span>V3 · Intereses</div>
+          <div class="ct-ad-item"><span class="ct-badge estatica">Estática</span>V2 · Intereses</div>
+          <div class="ct-ad-item"><span class="ct-badge estatica">Estática</span>V3 · Intereses</div>
+          <div class="ct-ad-item"><span class="ct-badge dinamica">Dinámica</span>V1 · Intereses</div>
+          <div class="ct-ad-item"><span class="ct-badge dinamica">Dinámica</span>Video · Intereses</div>
+          <div class="ct-ad-item"><span class="ct-badge dinamica">Dinámica</span>Video 2 · Intereses</div>
+        </div>
+      </div>
+      <div class="ct-adset-block">
+        <div class="ct-adset-hdr ct-adset-pros-lal">[PROS] LAL <span class="ct-adset-count">7 anuncios</span></div>
+        <div class="ct-ads-grid">
+          <div class="ct-ad-item"><span class="ct-badge dinamica">Dinámica</span>V3 · LAL</div>
+          <div class="ct-ad-item"><span class="ct-badge estatica">Estática</span>V2 · LAL</div>
+          <div class="ct-ad-item"><span class="ct-badge estatica">Estática</span>V3 · LAL</div>
+          <div class="ct-ad-item"><span class="ct-badge estatica">Estática</span>V1 · LAL</div>
+          <div class="ct-ad-item"><span class="ct-badge dinamica">Dinámica</span>Video · LAL</div>
+          <div class="ct-ad-item"><span class="ct-badge dinamica">Dinámica</span>V1 · LAL</div>
+          <div class="ct-ad-item"><span class="ct-badge dinamica">Dinámica</span>Video 2 · LAL</div>
+        </div>
+      </div>
+      <div class="ct-adset-block">
+        <div class="ct-adset-hdr ct-adset-rmk">[RMK] <span class="ct-adset-count">5 anuncios</span></div>
+        <div class="ct-ads-grid">
+          <div class="ct-ad-item"><span class="ct-badge estatica">Estática</span>V3 · RMK</div>
+          <div class="ct-ad-item"><span class="ct-badge estatica">Estática</span>V2 · RMK</div>
+          <div class="ct-ad-item"><span class="ct-badge estatica">Estática</span>V1 · RMK</div>
+          <div class="ct-ad-item"><span class="ct-badge dinamica">Dinámica</span>Video · RMK</div>
+          <div class="ct-ad-item"><span class="ct-badge dinamica">Dinámica</span>Video 2 · RMK</div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="fu" style="background:rgba(255,255,255,0.04);border:1px solid rgba(77,109,121,0.22);border-radius:14px;padding:26px">
